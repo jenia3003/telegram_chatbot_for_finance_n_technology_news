@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "policy": {
+    "description": "Only approved domains at or above MIN_RELIABILITY_SCORE enter the article pipeline.",
+    "unknown_domains": "candidate_only",
+    "social_networks": "disabled"
+  },
+  "approved_domains": [
+    {"domain": "baodautu.vn", "reliability_score": 8, "kind": "domestic_business_press", "enabled": true},
+    {"domain": "vietnamnet.vn", "reliability_score": 8, "kind": "domestic_press", "enabled": true},
+    {"domain": "thanhnien.vn", "reliability_score": 8, "kind": "domestic_press", "enabled": true},
+    {"domain": "dantri.com.vn", "reliability_score": 8, "kind": "domestic_press", "enabled": true},
+    {"domain": "nhandan.vn", "reliability_score": 9, "kind": "domestic_press", "enabled": true},
+    {"domain": "cafef.vn", "reliability_score": 7, "kind": "domestic_finance_press", "enabled": true},
+    {"domain": "vietstock.vn", "reliability_score": 7, "kind": "domestic_finance_press", "enabled": true},
+    {"domain": "ndh.vn", "reliability_score": 7, "kind": "domestic_finance_press", "enabled": true},
+    {"domain": "vietnambiz.vn", "reliability_score": 7, "kind": "domestic_finance_press", "enabled": true},
+    {"domain": "vietnamfinance.vn", "reliability_score": 7, "kind": "domestic_finance_press", "enabled": true},
+    {"domain": "cnbc.com", "reliability_score": 8, "kind": "international_finance_press", "enabled": true},
+    {"domain": "ft.com", "reliability_score": 9, "kind": "international_finance_press", "enabled": true},
+    {"domain": "wsj.com", "reliability_score": 9, "kind": "international_finance_press", "enabled": true},
+    {"domain": "economist.com", "reliability_score": 9, "kind": "international_economics_press", "enabled": true},
+    {"domain": "a.dj.com", "reliability_score": 9, "kind": "international_finance_press", "enabled": true},
+    {"domain": "vneconomy.vn", "reliability_score": 8, "kind": "domestic_economics_press", "enabled": true},
+    {"domain": "tapchikinhtetaichinh.vn", "reliability_score": 9, "kind": "official_domestic_finance_press", "enabled": true},
+    {"domain": "arstechnica.com", "reliability_score": 8, "kind": "technology_press", "enabled": true},
+    {"domain": "theverge.com", "reliability_score": 8, "kind": "technology_press", "enabled": true},
+    {"domain": "wired.com", "reliability_score": 8, "kind": "technology_press", "enabled": true},
+    {"domain": "theregister.com", "reliability_score": 8, "kind": "technology_press", "enabled": true},
+    {"domain": "openai.com", "reliability_score": 9, "kind": "official_company", "enabled": true},
+    {"domain": "about.fb.com", "reliability_score": 9, "kind": "official_company", "enabled": true},
+    {"domain": "cloud.google.com", "reliability_score": 9, "kind": "official_company", "enabled": true},
+    {"domain": "aboutamazon.com", "reliability_score": 9, "kind": "official_company", "enabled": true},
+    {"domain": "blogs.microsoft.com", "reliability_score": 9, "kind": "official_company", "enabled": true},
+    {"domain": "nvidianews.nvidia.com", "reliability_score": 9, "kind": "official_company", "enabled": true},
+    {"domain": "blogs.nvidia.com", "reliability_score": 9, "kind": "official_company", "enabled": true},
+    {"domain": "samsung.com", "reliability_score": 9, "kind": "official_company", "enabled": true},
+    {"domain": "fpt.com", "reliability_score": 9, "kind": "official_domestic_company", "enabled": true},
+    {"domain": "vingroup.net", "reliability_score": 9, "kind": "official_domestic_company", "enabled": true},
+    {"domain": "viettel.com.vn", "reliability_score": 9, "kind": "official_domestic_company", "enabled": true},
+    {"domain": "vnpt.com.vn", "reliability_score": 9, "kind": "official_domestic_company", "enabled": true},
+    {"domain": "vng.com.vn", "reliability_score": 9, "kind": "official_domestic_company", "enabled": true},
+    {"domain": "vinfastauto.com", "reliability_score": 9, "kind": "official_domestic_company", "enabled": true},
+    {"domain": "vietcombank.com.vn", "reliability_score": 9, "kind": "official_domestic_company", "enabled": true},
+    {"domain": "mbbank.com.vn", "reliability_score": 9, "kind": "official_domestic_company", "enabled": true},
+    {"domain": "hoaphat.com.vn", "reliability_score": 9, "kind": "official_domestic_company", "enabled": true},
+    {"domain": "mwg.vn", "reliability_score": 9, "kind": "official_domestic_company", "enabled": true}
+  ],
+  "candidate_domains": [
+    {"domain": "linkedin.com", "kind": "job_platform", "enabled": false, "note": "Tạm hoãn; chỉ tích hợp qua API/chương trình được cấp quyền."},
+    {"domain": "indeed.com", "kind": "job_platform", "enabled": false, "note": "Tạm hoãn; chỉ tích hợp qua API đối tác hoặc feed được cấp quyền."},
+    {"domain": "facebook.com", "kind": "social_network", "enabled": false, "note": "Tắt trong phạm vi nguồn cố định; không scrape group."},
+    {"domain": "groups.google.com", "kind": "community", "enabled": false, "note": "Tắt trong phạm vi nguồn cố định."}
+  ],
+  "entities": [
+    {"name": "FPT", "aliases": ["FPT Corporation"], "topics": ["technology", "jobs", "finance"]},
+    {"name": "Viettel", "aliases": ["Viettel Group"], "topics": ["technology", "telecom", "jobs"]},
+    {"name": "Vingroup", "aliases": ["VinFast", "Vinhomes"], "topics": ["markets", "technology", "jobs"]},
+    {"name": "Vietnam banks", "aliases": ["Vietcombank", "MBBank", "Techcombank"], "topics": ["finance", "markets", "jobs"]},
+    {"name": "Vietnam stock market", "aliases": ["VN-Index", "HNX-Index", "UPCoM"], "topics": ["markets", "finance"]},
+    {"name": "AI leaders", "aliases": ["OpenAI", "Microsoft", "Google", "NVIDIA", "Meta", "Apple"], "topics": ["technology", "jobs"]}
+  ],
+  "discovery_queries": [
+    {"name": "Vietnam macro and markets", "query": "Vietnam CPI GDP interest rates stock market", "category": "markets", "max_entries": 3, "enabled": true},
+    {"name": "Vietnam finance", "query": "Vietnam banking earnings stocks liquidity foreign investors", "category": "finance", "max_entries": 3, "enabled": true},
+    {"name": "Vietnam leading companies", "query": "FPT Viettel Vingroup VinFast Vietcombank MBBank news", "category": "finance", "max_entries": 3, "enabled": true},
+    {"name": "Data and AI jobs Vietnam", "query": "Vietnam data analyst data engineer data scientist AI jobs", "category": "technology", "max_entries": 3, "enabled": true},
+    {"name": "Global technology leaders", "query": "OpenAI Microsoft Google NVIDIA Meta Apple technology news", "category": "technology", "max_entries": 3, "enabled": true},
+    {"name": "Cybersecurity and software", "query": "enterprise cybersecurity software vulnerability cloud news", "category": "technology", "max_entries": 3, "enabled": true}
+  ]
+}

@@ -1,0 +1,5 @@
+python-telegram-bot==22.8
+feedparser==6.0.14
+requests==2.34.2
+google-genai==2.24.0
+python-dotenv==1.2.3
